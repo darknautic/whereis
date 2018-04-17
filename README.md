@@ -1,2 +1,2 @@
 # whereis
-whereis command
+whereis utility
