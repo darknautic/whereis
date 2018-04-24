@@ -1,10 +1,13 @@
 {
-    "index" : "C:\\Users\\esajaus\\whereis\\index.txt",
-    "paths": [
-      "/home/sajid/documents",
-      "C:\\0\\OneDrive - Ericsson AB\\workspace.python\\whereis",
-      "c"
 
-    ]
+  "INDEX_CACHE_FILE" : "C:\\Users\\esajaus\\whereis\\index.txt",
+
+  "USER_PATHS": [
+      "/home/sajid/documents",
+      "C:\\0\\OneDrive - Ericsson AB\\workspace.python",
+      "otra ruta",
+      "C:\\0\\OneDrive - Ericsson AB\\workspace.netbeans",
+       "C:\\0\\OneDrive - Ericsson AB\\workspace.uml"
+  ]
 
 }
