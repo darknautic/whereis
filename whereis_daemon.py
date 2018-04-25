@@ -72,6 +72,7 @@ def build_index():
         indexing(path)
         print("Indexing \"" + path + " \" ... ")
 
+    print("[INFO] - Index Size : ", len( index_cache))
     print("[INFO] - Total Indexing Time : ", time.time() - t_start )
 
 
