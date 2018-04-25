@@ -8,6 +8,7 @@ whereis daemon
 import sys,os
 import json
 import time
+import re
 
 
 index_cache_file = ""
@@ -74,6 +75,9 @@ def build_index():
 
     print("[INFO] - Total Indexing Time : ", time.time() - t_start )
 
+#def printError():
+ #   str_err=re.compile('ERROR')
+  #  error=
 
 def main(argv):
     load_config()
