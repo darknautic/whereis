@@ -7,8 +7,8 @@ import os,sys
 import time
 
 root_dir="C:\\0\\DIRS"
-num_dirs=300
-num_files=1000
+num_dirs=30
+num_files=100
 num_levels=10
 
 
