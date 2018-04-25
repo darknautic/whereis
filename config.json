@@ -4,12 +4,13 @@
 
   "USER_PATHS": [
       "/home/sajid/documents",
-      "C:\\0\\OneDrive - Ericsson AB\\workspace.python",
+      "C:\\0\\OneDrive - Ericsson AB\\xworkspace.python",
       "otra ruta",
-      "C:\\0\\OneDrive - Ericsson AB\\workspace.netbeans",
-      "C:\\0\\OneDrive - Ericsson AB\\workspace.uml",
-      "C:\\Users\\o.carrazco.byd\\scripts\\",
-      "C:\\Users\\o.carrazco.byd\\MyDocuments\\",
+      "C:\\0\\OneDrive - Ericsson AB\\xworkspace.netbeans",
+       "C:\\0\\OneDrive - Ericsson AB\\xworkspace.uml",
+       "Cs:\\0",
+       "C:\\Program Files (x86)\\" 
+
   ]
 
 }
