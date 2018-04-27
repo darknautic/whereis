@@ -42,18 +42,18 @@ def verify_paths():
 
         try:
             open(index_cache_file, 'a').close()
-            print(printInf("Index created successfully  "), index_cache_file)
+            printInf("Index created successfully  "+ index_cache_file)
         except FileNotFoundError:
             printErr("Index path does NOT exist.")
             sys.exit(1)
 
     for user_path in user_paths:
         if not os.path.exists(user_path):
-            print(printWrn("Path to be indexed does NOT exist  ") + user_path)
+            printWrn("Path to be indexed does NOT exist  " + user_path)
         else:
             user_valid_paths.append(user_path)
 
-    print(printInf("Valid paths "), len(user_valid_paths))
+    printInf("Valid paths "+ str(len(user_valid_paths)))
 
 def indexing(path):
     global index_cache
@@ -72,8 +72,8 @@ def build_index():
         indexing(path)
         print("Indexing \"" + path + " \" ... ")
 
-    print(printInf("Index Size : "), len( index_cache))
-    print(printInf("Total Indexing Time : "), time.time() - t_start )
+    printInf("Index Size : "+ str(len( index_cache)))
+    printInf("Total Indexing Time : "+ str(time.time() - t_start))
 
 def main(argv):
     load_config()
