@@ -10,7 +10,7 @@ l = []  ; limit in python 2.7 32 bits   => 120898752
 import sys,os
 import json
 import time
-import re
+from Utilities import  printInf,printWrn,printErr
 
 
 index_cache_file = ""
@@ -30,33 +30,32 @@ def load_config():
             index_cache_file = config['INDEX_CACHE_FILE']
             user_paths = config['USER_PATHS']
         except :
-            print("[ERROR] - Configuration File Corrupted")
+            printErr("Configuration File Corrupted")
             sys.exit(1)
 
 
 def verify_paths():
 
     if os.path.exists(index_cache_file):
-        print("[INFO] - Index cache found " + index_cache_file )
+        printInf("Index cache found " + index_cache_file)
     else:
-        print("[WARN] - Index cache not found , creating index file ... ")
+
+        printWrn("Index cache not found , creating index file ... ")
 
         try:
             open(index_cache_file, 'a').close()
-            print("[INFO] - Index created successfully  ", index_cache_file)
-
+            printInf("Index created successfully  "+ index_cache_file)
         except FileNotFoundError:
-            print("[ERROR] - Index path does NOT exist.")
+            printErr("Index path does NOT exist.")
             sys.exit(1)
 
     for user_path in user_paths:
         if not os.path.exists(user_path):
-            print("[WARN] - Path to be indexed does NOT exist  " + user_path)
+            printWrn("Path to be indexed does NOT exist  " + user_path)
         else:
             user_valid_paths.append(user_path)
 
-    print("[INFO] - Valid paths ", len(user_valid_paths) )
-
+    printInf("Valid paths "+ str(len(user_valid_paths)))
 
 def indexing(path):
     global index_cache
@@ -75,12 +74,8 @@ def build_index():
         indexing(path)
         print("Indexing \"" + path + " \" ... ")
 
-    print("[INFO] - Index Size : ", len( index_cache))
-    print("[INFO] - Total Indexing Time : ", time.time() - t_start )
-
-#def printError():
- #   str_err=re.compile('ERROR')
-  #  error=
+    printInf("Index Size : "+ str(len( index_cache)))
+    printInf("Total Indexing Time : "+ str(time.time() - t_start))
 
 def main(argv):
     load_config()
