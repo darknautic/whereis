@@ -3,6 +3,8 @@ whereis daemon
 1.- Read configuration file
 2.- Build index
 3.- Refresh index cache
+
+l = []  ; limit in python 2.7 32 bits   => 120898752
 """
 
 import sys,os
